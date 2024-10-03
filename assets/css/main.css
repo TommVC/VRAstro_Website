@@ -237,7 +237,7 @@ h6 {
     transition: 0.3s;
     border-radius: 4px;
     z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 30px rgba(255, 253, 253, 0.1);
   }
 
   .navmenu .dropdown ul li {
@@ -777,7 +777,8 @@ section,
 --------------------------------------------------------------*/
 .about-2 .content {
   background-color: var(--surface-color);
-  padding-top: 50px;
+  padding-top: 20px;
+  border-radius: 5px;
   padding-bottom: 50px;
 }
 
@@ -800,13 +801,15 @@ section,
 }
 
 .about-2 .btn-get-started {
+  width: 18%;
+  height: 5%;
   background-color: var(--accent-color);
   color: var(--contrast-color);
   border-radius: 30px;
   padding: 8px 30px;
-  border: 2px solid transparent;
+  border: 7px solid transparent;
   transition: 0.3s all ease-in-out;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .about-2 .btn-get-started:hover {
@@ -816,7 +819,6 @@ section,
 }
 
 .about-2 .lead {
-  float: left;
   line-height: 1.6;
   font-size: 18px;
   font-weight: normal;
