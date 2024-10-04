@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>About - Active Bootstrap Template</title>
+  <title>VRAstro</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -25,7 +25,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/jesse.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Active
@@ -36,7 +36,7 @@
   ======================================================== -->
 </head>
 
-<body class="about-page">
+<body class="lasso-page">
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
@@ -63,37 +63,59 @@
   <main class="main">
 
     <!-- About 2 Section -->
+     <!-- Need menu photo, drawing photo, generation photo, selection photo-->
     <section id="about-2" class="about-2 section">
 
       <div class="container">
         <div class="content">
           <div class="row justify-content-center">
             <div class="col-sm-12 col-md-5 col-lg-4 col-xl-4 order-lg-2 offset-xl-1 mb-4">
-              <div class="img-wrap text-center text-md-left" data-aos="fade-up" data-aos-delay="100">
-                <div class="img">
-                  <img src="assets/img/img_v_3.jpg" alt="circle image" class="img-fluid">
+              <div class="swiper mySwiperAbout">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="assets/img/Lasso_menu.png" alt="Image 1" class="img-fluid">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/img/User_Input_Befor.png" alt="Image 2" class="img-fluid">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/img/Lasso_Gend.png" alt="Image 3" class="img-fluid">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/img/Lasso_Subtraction.png" alt="Image 4" class="img-fluid">
+                  </div>
                 </div>
+                <!-- Pagination for the images -->
+                <div class="swiper-pagination"></div>
               </div>
+
             </div>
 
             <div class="offset-md-0 offset-lg-1 col-sm-12 col-md-5 col-lg-5 col-xl-4" data-aos="fade-up">
               <div class="px-3">
-                <span class="content-subtitle">Our Mission</span>
+                <span class="content-subtitle">Lasso Selection.</span>
                 <h2 class="content-title text-start">
-                  The Big Oxmox advised her not to do so, because there were
-                  thousands.
+                  Lasso Overview.
                 </h2>
                 <p class="lead">
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia. It is a paradisematic country.
+                  Usage of the Lasso method: <br>
+                  The user first positions the "whiteboard" for them to draw on. Once locked the user will notice a second whiteboard behind the first. The back whiteboard can be moved towards or away from the user, therefore controlling the depth. <br>
+                  With the boards properly positioned, a user can begin to draw with the controller by pointing at the board and holding a button down.
+                  Users can reset input at any point with the menu reset button. 
+                  Once happy with the input shape, users can generate the lasso shape ready for selection.
+                  By default the method adds to a selection, however a subtractive mode can be toggled between. This allows users to add and scalpt away to their desired selection.
+                  
+
+                  <br> <br>
                 </p>
                 <p class="mb-5">
-                  The Big Oxmox advised her not to do so, because there were
-                  thousands of bad Commas, wild Question Marks and devious Semikoli.
+                  Components of lasso method: <br>
+                  Planes: Used to position the system and adjust the length of the lasso. <br>
+                  Shape Creation: This used line renderers to construct the perimeter of the shape on both planes.
+                  Mesh Creation: Created a mesh later used to identify whether data points are inside or outside of the lasso.
+                  Inside-Outside Test:
                 </p>
-                <p>
-                  <a href="#" class="btn-get-started">Get Started</a>
-                </p>
+                
               </div>
             </div>
           </div>
@@ -107,38 +129,56 @@
       <div class="container">
         <div class="row gy-4 justify-content-center">
 
-          <div class="col-lg-3">
+          <div class="col-lg-4">
             <div class="services-item" data-aos="fade-up">
-              <div class="services-icon">
-                <i class="bi bi-bullseye"></i>
-              </div>
-              <div>
-                <h3>Technology</h3>
-                <p>Separated they live in Bookmarksgrove right at the coast</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3">
-            <div class="services-item" data-aos="fade-up" data-aos-delay="100">
               <div class="services-icon">
                 <i class="bi bi-command"></i>
               </div>
               <div>
-                <h3>Web Design</h3>
-                <p>Separated they live in Bookmarksgrove right at the coast</p>
+                <h3>Background and context:</h3>
+                <p> The premise of lasso selection typically lends itself to 2D environments. This tendency is due to the simplicity of how regions of interest are defined. 
+                  This can be observed in Adobe Photoshop when using their lasso tool to select a desireable region. The user input in 2D lasso selections is a 1:1 mapping to the perimeter of the shape making up a selection. 
+                  However, with 3D lasso selections there lacks reliable 3D user input that is also easy to use. A common work around is to record a 2D input (imagine drawing on a whiteboard) and then projecting the drawn shape into the direction the user is facing.
+                  Another alternative are hybrid systems that make use of drawing tablets and virtual reality headsets to record the input.
+                  For lasso volumetric selection to be of added value, the length of the projection needs to controlled by the user. Otherwise lasso selections would result in excessive or insufficient selections.
+                  Furthermore, the ability to iteratively define selections with varying inputs would result in greater user control. 
+                                </p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-3">
+          <div class="col-lg-4">
+            <div class="services-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="services-icon">
+                <i class="bi bi-bullseye"></i>
+              </div>
+              <div>
+                <h3>Objectives and implemented features:</h3>
+                <p>
+                  The aim of this project was to determine weather volumetric selection through a lasso method in virtual reality provided an improvement (increased accuracy, efficiency, usability and decreased workload) in data selection in comparison to a desktop environment.<br><br>
+                  Implemented features: <br> 
+                  • Adjustable depth of lasso into the screen or third dimension. <br>
+                  • The lasso system records and resets user input. <br>
+                  • It also edits the user input to close the shape and remove overlappings. <br>
+                  • Iterative use of shapes to add to a selection. <br>
+                  • Can iteratively add and subtract to and from existing selections. <br></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
             <div class="services-item" data-aos="fade-up" data-aos-delay="200">
               <div class="services-icon">
                 <i class="bi bi-bar-chart"></i>
               </div>
               <div>
-                <h3>Branding</h3>
-                <p>Separated they live in Bookmarksgrove right at the coast</p>
+                <h3>Results:</h3>
+                <p>
+                  To carry out the objective of this project, a study was conducted with 25 users completing four selections . Each user was given training with the iDaVIE-V system in VR.
+                  The users' time in VR was limited to an hour to avoid fatigue, this also constrained our training to five minutes per method, and ten minutes per selection to also account for the inital training. 
+                  Method performance was evaluated based on accuracy, efficiency, usability and workload. Accuracy was measured by the F1 score and MCC, efficiency by completion time, usability with System Usability Scale questionnaires and workload was measured with the NASA Task Load Index.
+                  After conducting a statistical analysis, it was proven that the lasso method performed significantly worse than the desktop benchmark across all metrics. This was in part due to incomplete code creating bugs that frustrated users and caused incorrect selections. 
+                </p>
               </div>
             </div>
           </div>
@@ -149,367 +189,82 @@
 
     <!-- Stats Section -->
     <section id="stats" class="stats section light-background">
-
-      <div class="container">
-
-        <div class="row gy-4 justify-content-center">
-
-          <div class="col-lg-5">
-            <div class="images-overlap">
-              <img src="assets/img/img_v_1.jpg" alt="student" class="img-fluid img-1" data-aos="fade-up">
-            </div>
-          </div>
-
-          <div class="col-lg-4 ps-lg-5">
-            <span class="content-subtitle">Why Us</span>
-            <h2 class="content-title">Far far away Behind the Word Mountains</h2>
-            <p class="lead">
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia.
-            </p>
-            <p class="mb-5">
-              There live the blind texts. Separated they live in Bookmarksgrove
-              right at the coast of the Semantics, a large language ocean.
-            </p>
-            <div class="row mb-5 count-numbers">
-
-              <!-- Start Stats Item -->
-              <div class="col-4 counter" data-aos="fade-up" data-aos-delay="100">
-                <span data-purecounter-separator="true" data-purecounter-start="0" data-purecounter-end="3919" data-purecounter-duration="1" class="purecounter number"></span>
-                <span class="d-block">Coffee</span>
-              </div>
-              <!-- End Stats Item -->
-
-              <!-- Start Stats Item -->
-              <div class="col-4 counter" data-aos="fade-up" data-aos-delay="200">
-                <span data-purecounter-separator="true" data-purecounter-start="0" data-purecounter-end="2831" data-purecounter-duration="1" class="purecounter number"></span>
-                <span class="d-block">Codes</span>
-              </div>
-              <!-- End Stats Item -->
-
-              <!-- Start Stats Item -->
-              <div class="col-4 counter" data-aos="fade-up" data-aos-delay="300">
-                <span data-purecounter-separator="true" data-purecounter-start="0" data-purecounter-end="1914" data-purecounter-duration="1" class="purecounter number"></span>
-                <span class="d-block">Projects</span>
-              </div>
-              <!-- End Stats Item -->
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- /Stats Section -->
-
-    <!-- Team Section -->
-    <section id="team" class="team section">
-
-      <div class="site-section slider-team-wrap">
-        <div class="container">
-
-          <div class="slider-nav d-flex justify-content-end mb-3">
-            <a href="#" class="js-prev js-custom-prev"><i class="bi bi-arrow-left-short"></i></a>
-            <a href="#" class="js-next js-custom-next"><i class="bi bi-arrow-right-short"></i></a>
-          </div>
-
-          <div class="swiper init-swiper" data-aos="fade-up" data-aos-delay="100">
-            <script type="application/json" class="swiper-config">
-              {
-                "loop": true,
-                "speed": 600,
-                "autoplay": {
-                  "delay": 5000
-                },
-                "slidesPerView": "1",
-                "pagination": {
-                  "el": ".swiper-pagination",
-                  "type": "bullets",
-                  "clickable": true
-                },
-                "navigation": {
-                  "nextEl": ".js-custom-next",
-                  "prevEl": ".js-custom-prev"
-                },
-                "breakpoints": {
-                  "640": {
-                    "slidesPerView": 2,
-                    "spaceBetween": 30
-                  },
-                  "768": {
-                    "slidesPerView": 3,
-                    "spaceBetween": 30
-                  },
-                  "1200": {
-                    "slidesPerView": 3,
-                    "spaceBetween": 30
-                  }
-                }
-              }
-            </script>
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+      <!-- Left Column for Images -->
+        <div class="col-lg-6">
+          <div class="swiper mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="team">
-                  <div class="pic">
-                    <img src="assets/img/team/team-1.jpg" alt="Image" class="img-fluid">
-                  </div>
-                  <h3 clas="">
-                    <a href="#"><span class="">Jeremy</span> Walker</a>
-                  </h3>
-                  <span class="d-block position">CEO, Founder, Atty.</span>
-                  <p>
-                    Separated they live in. Separated they live in Bookmarksgrove
-                    right at the coast of the Semantics, a large language ocean.
-                  </p>
-                  <p class="mb-0">
-                    <a href="#" class="more dark">Learn More <span class="bi bi-arrow-right-short"></span></a>
-                  </p>
-                </div>
+                <img src="assets/img/AdobeLasso.png" alt="Image 1" class="img-fluid">
               </div>
               <div class="swiper-slide">
-                <div class="team">
-                  <div class="pic">
-                    <img src="assets/img/team/team-2.jpg" alt="Image" class="img-fluid">
-                  </div>
-                  <h3 clas="">
-                    <a href="#"><span class="">Lawson</span> Arnold</a>
-                  </h3>
-                  <span class="d-block position">CEO, Founder, Atty.</span>
-                  <p>
-                    Separated they live in. Separated they live in Bookmarksgrove
-                    right at the coast of the Semantics, a large language ocean.
-                  </p>
-                  <p class="mb-0">
-                    <a href="#" class="more dark">Learn More <span class="bi bi-arrow-right-short"></span></a>
-                  </p>
-                </div>
+                <img src="assets/img/dataCube1.png" alt="Image 2" class="img-fluid">
               </div>
               <div class="swiper-slide">
-                <div class="team">
-                  <div class="pic">
-                    <img src="assets/img/team/team-3.jpg" alt="Image" class="img-fluid">
-                  </div>
-                  <h3 clas="">
-                    <a href="#"><span class="">Patrik</span> White</a>
-                  </h3>
-                  <span class="d-block position">CEO, Founder, Atty.</span>
-                  <p>
-                    Separated they live in. Separated they live in Bookmarksgrove
-                    right at the coast of the Semantics, a large language ocean.
-                  </p>
-                  <p class="mb-0">
-                    <a href="#" class="more dark">Learn More <span class="bi bi-arrow-right-short"></span></a>
-                  </p>
-                </div>
+                <img src="assets/img/Lasso_Boards.png" alt="Image 3" class="img-fluid">
               </div>
               <div class="swiper-slide">
-                <div class="team">
-                  <div class="pic">
-                    <img src="assets/img/team/team-4.jpg" alt="Image" class="img-fluid">
-                  </div>
-                  <h3 clas="">
-                    <a href="#"><span class="">Kathryn</span> Ryan</a>
-                  </h3>
-                  <span class="d-block position">CEO, Founder, Atty.</span>
-                  <p>
-                    Separated they live in. Separated they live in Bookmarksgrove
-                    right at the coast of the Semantics, a large language ocean.
-                  </p>
-                  <p class="mb-0">
-                    <a href="#" class="more dark">Learn More <span class="bi bi-arrow-right-short"></span></a>
-                  </p>
-                </div>
+                <img src="assets/img/LassoResults.jpg" alt="Image 4" class="img-fluid">
               </div>
-              <!-- <div class="swiper-slide"></div> -->
             </div>
-          </div>
+            <!-- Pagination for Images -->
+          <div class="swiper-pagination"></div>
         </div>
-        <!-- /.container -->
       </div>
-    </section><!-- /Team Section -->
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <p>Happy Customers</p>
-        <h2>Testimonials</h2>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up">
-        <div class="row justify-content-center">
-          <div class="col-lg-7">
-            <div class="swiper init-swiper">
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  },
-                  "breakpoints": {
-                    "320": {
-                      "slidesPerView": 1,
-                      "spaceBetween": 40
-                    },
-                    "1200": {
-                      "slidesPerView": 1,
-                      "spaceBetween": 1
-                    }
-                  }
-                }
-              </script>
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="testimonial mx-auto">
-                    <figure class="img-wrap">
-                      <img src="assets/img/testimonials/testimonials-1.jpg" alt="Image" class="img-fluid">
-                    </figure>
-                    <h3 class="name">Adam Aderson</h3>
-                    <blockquote>
-                      <p>
-                        “There live the blind texts. Separated they live in
-                        Bookmarksgrove right at the coast of the Semantics, a large
-                        language ocean.”
-                      </p>
-                    </blockquote>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="testimonial mx-auto">
-                    <figure class="img-wrap">
-                      <img src="assets/img/testimonials/testimonials-2.jpg" alt="Image" class="img-fluid">
-                    </figure>
-                    <h3 class="name">Lukas Devlin</h3>
-                    <blockquote>
-                      <p>
-                        “There live the blind texts. Separated they live in
-                        Bookmarksgrove right at the coast of the Semantics, a large
-                        language ocean.”
-                      </p>
-                    </blockquote>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="testimonial mx-auto">
-                    <figure class="img-wrap">
-                      <img src="assets/img/testimonials/testimonials-3.jpg" alt="Image" class="img-fluid">
-                    </figure>
-                    <h3 class="name">Kayla Bryant</h3>
-                    <blockquote>
-                      <p>
-                        “There live the blind texts. Separated they live in
-                        Bookmarksgrove right at the coast of the Semantics, a large
-                        language ocean.”
-                      </p>
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
+      <!-- Right Column for Text -->
+      <div class="col-lg-6">
+        <div class="swiper-text">
+          <div class="swiper-slide-text active">
+            <h2>Adope Lasso Example</h2>
+            <p>Description for Image 1 goes here.</p>
+          </div>
+          <div class="swiper-slide-text">
+            <h2>Data Cube Example</h2>
+            <p>Description for Image 2 goes here.</p>
+          </div>
+          <div class="swiper-slide-text">
+            <h2>Evaluation Metrics</h2>
+            <p>Description for Image 3 goes here.</p>
+          </div>
+          <div class="swiper-slide-text">
+            <h2>Graph of Lasso vs Desktop performance</h2>
+            <p>Box and Whisker Diagram of lasso performance vs desktop.</p>
           </div>
         </div>
       </div>
-    </section><!-- /Testimonials Section -->
+    </div>
+  </section>
 
+
+              
+
+   
+    
   </main>
 
   <footer id="footer" class="footer light-background">
     <div class="container">
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
-          <div class="widget">
-            <h3 class="widget-heading">About Us</h3>
-            <p class="mb-4">
-              There live the blind texts. Separated they live in Bookmarksgrove
-              right at the coast of the Semantics, a large language ocean.
-            </p>
-            <p class="mb-0">
-              <a href="#" class="btn-learn-more">Learn more</a>
-            </p>
-          </div>
+      <div class="row g-4 justify-content-center">
+        <!-- About Us Widget (Left) -->
+        <div class="col-md-4 col-lg-3 mb-3 mb-md-0 widget">
+          <h3 class="widget-heading">About Us</h3>
+          <p>This project was completed by three Computer Science Honours students at the University of Cape Town in 2024. The lasso method was designed and developed by Jesse Plant. All three members worked together on testing and evaluations.</p>
+          <a href="#" class="btn-learn-more">Learn more</a>
         </div>
-        <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
-          <div class="widget">
-            <h3 class="widget-heading">Navigation</h3>
-            <ul class="list-unstyled float-start me-5">
-              <li><a href="#">Overview</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Find Buyers</a></li>
-            </ul>
-            <ul class="list-unstyled float-start">
-              <li><a href="#">Overview</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Services</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 pl-lg-5">
-          <div class="widget">
-            <h3 class="widget-heading">Recent Posts</h3>
-            <ul class="list-unstyled footer-blog-entry">
-              <li>
-                <span class="d-block date">May 3, 2020</span>
-                <a href="#">There live the Blind Texts</a>
-              </li>
-              <li>
-                <span class="d-block date">May 3, 2020</span>
-                <a href="#">Separated they live in Bookmarksgrove right</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 pl-lg-5">
-          <div class="widget">
-            <h3 class="widget-heading">Connect</h3>
-            <ul class="list-unstyled social-icons light mb-3">
-              <li>
-                <a href="#"><span class="bi bi-facebook"></span></a>
-              </li>
-              <li>
-                <a href="#"><span class="bi bi-twitter-x"></span></a>
-              </li>
-              <li>
-                <a href="#"><span class="bi bi-linkedin"></span></a>
-              </li>
-              <li>
-                <a href="#"><span class="bi bi-google"></span></a>
-              </li>
-              <li>
-                <a href="#"><span class="bi bi-google-play"></span></a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="widget">
-            <div class="footer-subscribe">
-              <h3 class="widget-heading">Subscribe</h3>
-              <form action="forms/newsletter.php" method="post" class="php-email-form">
-                <div class="mb-2">
-                  <input type="text" class="form-control" name="email" placeholder="Enter your email">
-
-                  <button type="submit" class="btn btn-link">
-                    <span class="bi bi-arrow-right"></span>
-                  </button>
-                </div>
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">
-                  Your subscription request has been sent. Thank you!
-                </div>
-              </form>
-            </div>
-          </div>
+        
+        <!-- Navigation Widget (Right) -->
+        <div class="col-md-4 col-lg-3 widget">
+          <h3 class="widget-heading">Navigation</h3>
+          <ul class="list-unstyled">
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Find Buyers</a></li>
+          </ul>
         </div>
       </div>
-
+      
       <div class="copyright d-flex flex-column flex-md-row align-items-center justify-content-md-between">
         <p>© <span>Copyright</span> <strong class="px-1 sitename">Active.</strong> <span>All Rights Reserved</span></p>
         <div class="credits">
@@ -522,6 +277,12 @@
       </div>
     </div>
   </footer>
+  
+        
+      
+       
+
+      
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -541,6 +302,61 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- Other content above -->
+
+<!-- Add Swiper initialization script here -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    on: {
+      slideChange: function () {
+        var activeIndex = this.realIndex; // Get the active slide index
+        // Hide all text slides
+        document.querySelectorAll('.swiper-slide-text').forEach(function(el) {
+          el.classList.remove('active');
+        });
+        // Show the text corresponding to the active image
+        document.querySelectorAll('.swiper-slide-text')[activeIndex].classList.add('active');
+      }
+    }
+  });
+</script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,  // Enables continuous loop mode
+    autoplay: {
+      delay: 5000,  // Automatically cycle images every 5 seconds
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,  // Allows users to click on pagination dots
+    },
+  });
+</script>
+<script>
+  var swiperAbout = new Swiper(".mySwiperAbout", {
+    loop: true,  // Enables continuous loop mode
+    autoplay: {
+      delay: 5000,  // Automatically cycle images every 5 seconds
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,  // Allows users to click on pagination dots
+    },
+  });
+</script>
+
+<!-- Include required Swiper.js library if not already included -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</body>
 
 </body>
 
